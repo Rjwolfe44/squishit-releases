@@ -9,8 +9,8 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 **[SquishIt-Setup-v1.2.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.2.0/SquishIt-Setup-v1.2.0.exe)** &nbsp;·&nbsp; v1.2.0 &nbsp;·&nbsp; Released 2026-03-22
 
-> * Release  
-> *
+> **Quick Compress preset selector** — choose Lite, Balanced, or Max right from the right-click window.  
+> **Auto-update** — the app checks for new releases on startup and shows a one-click install banner.
 
 ---
 
@@ -26,10 +26,17 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 ### v1.2.0 — 2026-03-22
 
-* Release
+## What's New
 
+- **Quick Compress preset selector** — Lite (H.264 fast), Balanced (HEVC), and Max (SVT-AV1) presets are now selectable directly in the right-click compression window. Your last choice is remembered.
+- **Auto-update system** — SquishIt now checks for new releases on startup (once per 24 h). When an update is found, a banner appears with a one-click "Download & Install" button that streams the new installer and applies it silently.
 
-*
+## Bug Fixes & Improvements
+
+- Fixed AV1 Max mode crash (`-svtav1-params` option unsupported by bundled FFmpeg — removed).
+- Fixed "Open in SquishIt" spawning a duplicate window when the app is already running (single-instance IPC via local TCP).
+- Compress / Clear buttons no longer get cut off when resizing the window.
+- Startup is significantly faster — hardware detection and compressor creation are deferred to background threads.
 
 ---
 
