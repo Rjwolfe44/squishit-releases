@@ -7,7 +7,10 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 ## ⬇ Latest Download
 
-No releases yet — check back soon!
+**[SquishIt-Setup-v1.2.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.2.0/SquishIt-Setup-v1.2.0.exe)** &nbsp;·&nbsp; v1.2.0 &nbsp;·&nbsp; Released 2026-03-22
+
+> * Release  
+> *
 
 ---
 
@@ -15,7 +18,18 @@ No releases yet — check back soon!
 
 | Version | Released | Download |
 |---------|----------|----------|
-| *(none yet)* | — | — |
+| **v1.2.0** | 2026-03-22 | [SquishIt-Setup-v1.2.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.2.0/SquishIt-Setup-v1.2.0.exe) |
+
+---
+
+## Release Notes
+
+### v1.2.0 — 2026-03-22
+
+* Release
+
+
+*
 
 ---
 
