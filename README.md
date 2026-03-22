@@ -7,10 +7,12 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 ## ⬇ Latest Download
 
-**[SquishIt-Setup-v1.2.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.2.0/SquishIt-Setup-v1.2.0.exe)** &nbsp;·&nbsp; v1.2.0 &nbsp;·&nbsp; Released 2026-03-22
+**[SquishIt-Setup-v1.2.1.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.2.1/SquishIt-Setup-v1.2.1.exe)** &nbsp;·&nbsp; v1.2.1 &nbsp;·&nbsp; Released 2026-03-22
 
-> **Quick Compress preset selector** — choose Lite, Balanced, or Max right from the right-click window.  
-> **Auto-update** — the app checks for new releases on startup and shows a one-click install banner.
+> ## What's New  
+> - Quick Compress no longer starts immediately. It now waits for an explicit Start Compression click so you can actually choose Lite, Balanced, or Max every time.  
+> - Quick Compress stays open after finishing instead of disappearing on its own.  
+> ## Fixes
 
 ---
 
@@ -18,25 +20,32 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 | Version | Released | Download |
 |---------|----------|----------|
+| **v1.2.1** | 2026-03-22 | [SquishIt-Setup-v1.2.1.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.2.1/SquishIt-Setup-v1.2.1.exe) |
 | **v1.2.0** | 2026-03-22 | [SquishIt-Setup-v1.2.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.2.0/SquishIt-Setup-v1.2.0.exe) |
 
 ---
 
 ## Release Notes
 
-### v1.2.0 — 2026-03-22
+### v1.2.1 — 2026-03-22
 
 ## What's New
 
-- **Quick Compress preset selector** — Lite (H.264 fast), Balanced (HEVC), and Max (SVT-AV1) presets are now selectable directly in the right-click compression window. Your last choice is remembered.
-- **Auto-update system** — SquishIt now checks for new releases on startup (once per 24 h). When an update is found, a banner appears with a one-click "Download & Install" button that streams the new installer and applies it silently.
+- Quick Compress no longer starts immediately. It now waits for an explicit Start Compression click so you can actually choose Lite, Balanced, or Max every time.
+- Quick Compress stays open after finishing instead of disappearing on its own.
 
-## Bug Fixes & Improvements
+## Fixes
 
-- Fixed AV1 Max mode crash (`-svtav1-params` option unsupported by bundled FFmpeg — removed).
-- Fixed "Open in SquishIt" spawning a duplicate window when the app is already running (single-instance IPC via local TCP).
-- Compress / Clear buttons no longer get cut off when resizing the window.
-- Startup is significantly faster — hardware detection and compressor creation are deferred to background threads.
+- Fixed Max preset failures on builds where the bundled FFmpeg does not include SVT-AV1. Codec availability is now detected against the bundled FFmpeg binary instead of a different system FFmpeg on PATH.
+- When Max is not available in the bundled build, Quick Compress now clearly tells you and falls back to the best available codec for that build.
+- Output preview stays aligned with the real codec/container choice for the selected preset.
+
+### v1.2.0 — 2026-03-22
+
+* Release
+
+
+*
 
 ---
 
