@@ -7,11 +7,11 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 ## ⬇ Latest Download
 
-**[SquishIt-Setup-v1.2.1.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.2.1/SquishIt-Setup-v1.2.1.exe)** &nbsp;·&nbsp; v1.2.1 &nbsp;·&nbsp; Released 2026-03-22
+**[SquishIt-Setup-v1.2.2.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.2.2/SquishIt-Setup-v1.2.2.exe)** &nbsp;·&nbsp; v1.2.2 &nbsp;·&nbsp; Released 2026-03-22
 
 > ## What's New  
-> - Quick Compress no longer starts immediately. It now waits for an explicit Start Compression click so you can actually choose Lite, Balanced, or Max every time.  
-> - Quick Compress stays open after finishing instead of disappearing on its own.  
+> - Quick Compress still waits for an explicit Start Compression click so preset choice stays intentional.  
+> - After a successful quick compression, the window now closes automatically again.  
 > ## Fixes
 
 ---
@@ -20,12 +20,25 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 | Version | Released | Download |
 |---------|----------|----------|
+| **v1.2.2** | 2026-03-22 | [SquishIt-Setup-v1.2.2.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.2.2/SquishIt-Setup-v1.2.2.exe) |
 | **v1.2.1** | 2026-03-22 | [SquishIt-Setup-v1.2.1.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.2.1/SquishIt-Setup-v1.2.1.exe) |
 | **v1.2.0** | 2026-03-22 | [SquishIt-Setup-v1.2.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.2.0/SquishIt-Setup-v1.2.0.exe) |
 
 ---
 
 ## Release Notes
+
+### v1.2.2 — 2026-03-22
+
+## What's New
+
+- Quick Compress still waits for an explicit Start Compression click so preset choice stays intentional.
+- After a successful quick compression, the window now closes automatically again.
+
+## Fixes
+
+- Restored the original auto-close behavior after success without bringing back the old auto-start regression.
+- Failure cases still stay open so the error message can be read and retried.
 
 ### v1.2.1 — 2026-03-22
 
