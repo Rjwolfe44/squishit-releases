@@ -7,12 +7,12 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 ## ⬇ Latest Download
 
-**[SquishIt-Setup-v1.3.1.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.3.1/SquishIt-Setup-v1.3.1.exe)** &nbsp;·&nbsp; v1.3.1 &nbsp;·&nbsp; Released 2026-03-22
+**[SquishIt-Setup-v1.4.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.4.0/SquishIt-Setup-v1.4.0.exe)** &nbsp;·&nbsp; v1.4.0 &nbsp;·&nbsp; Released 2026-03-23
 
-> ## What's New  
-> - Doubled the main window base size for the full app and clamp it safely to the current display so the larger default layout opens reliably on real screens.  
-> - Added manual update checks from the About dialog.  
-> - Added a History button and history window for completed compression jobs, with clear-history support and saved-space totals.
+> ﻿## What's new  
+> - Added a live encoder/thread preview in the main window.  
+> - Dynamic codec filtering now hides unavailable encoders and reflects real GPU support.  
+> - Strong/Extreme AV1 now favors compression efficiency and retries with stronger settings when needed.
 
 ---
 
@@ -20,6 +20,7 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 | Version | Released | Download |
 |---------|----------|----------|
+| **v1.4.0** | 2026-03-23 | [SquishIt-Setup-v1.4.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.4.0/SquishIt-Setup-v1.4.0.exe) |
 | **v1.3.1** | 2026-03-22 | [SquishIt-Setup-v1.3.1.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.3.1/SquishIt-Setup-v1.3.1.exe) |
 | **v1.2.2** | 2026-03-22 | [SquishIt-Setup-v1.2.2.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.2.2/SquishIt-Setup-v1.2.2.exe) |
 | **v1.2.1** | 2026-03-22 | [SquishIt-Setup-v1.2.1.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.2.1/SquishIt-Setup-v1.2.1.exe) |
@@ -28,6 +29,20 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 ---
 
 ## Release Notes
+
+### v1.4.0 — 2026-03-23
+
+﻿## What's new
+- Added a live encoder/thread preview in the main window.
+- Dynamic codec filtering now hides unavailable encoders and reflects real GPU support.
+- Strong/Extreme AV1 now favors compression efficiency and retries with stronger settings when needed.
+- Multicore tuning was improved for AV1, SVT-AV1, and VP9.
+- Cancel now stops active jobs without showing a fake completion toast.
+
+## Fixes
+- Better progress tracking using encoded timestamps and frame counts from ffprobe.
+- More accurate CPU/GPU reporting in the UI.
+- Installer rebuilt with the latest release polish.
 
 ### v1.3.1 — 2026-03-22
 
