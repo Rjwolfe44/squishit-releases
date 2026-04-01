@@ -7,12 +7,12 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 ## ⬇ Latest Download
 
-**[SquishIt-Setup-v1.5.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.5.0/SquishIt-Setup-v1.5.0.exe)** &nbsp;·&nbsp; v1.5.0 &nbsp;·&nbsp; Released 2026-04-01
+**[SquishIt-Setup-v1.5.1.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.5.1/SquishIt-Setup-v1.5.1.exe)** &nbsp;·&nbsp; v1.5.1 &nbsp;·&nbsp; Released 2026-04-01
 
-> ## What's New  
-> - Added fast, balanced, and strict target-size modes with iterative bitrate convergence for closer MB matching.  
-> - Added preflight skipping when the requested target is not smaller than the source file.  
-> - Added sample compare mode for quick codec checks and new batch queue-order controls.
+> ## What changed  
+> - Added a real auto target-size mode that resolves per source file into fast, balanced, or strict instead of behaving like a static label.  
+> - Made auto resource use and auto thread selection workload-aware so heavy software AV1, hardware encodes, and multi-job runs choose more sensible budgets.  
+> - Fixed the GUI batch path so auto thread selection is decided by the compressor at encode time instead of being frozen too early in the window layer.
 
 ---
 
@@ -20,6 +20,7 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 | Version | Released | Download |
 |---------|----------|----------|
+| **v1.5.1** | 2026-04-01 | [SquishIt-Setup-v1.5.1.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.5.1/SquishIt-Setup-v1.5.1.exe) |
 | **v1.5.0** | 2026-04-01 | [SquishIt-Setup-v1.5.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.5.0/SquishIt-Setup-v1.5.0.exe) |
 | **v1.4.0** | 2026-03-23 | [SquishIt-Setup-v1.4.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.4.0/SquishIt-Setup-v1.4.0.exe) |
 | **v1.3.1** | 2026-03-22 | [SquishIt-Setup-v1.3.1.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.3.1/SquishIt-Setup-v1.3.1.exe) |
@@ -30,6 +31,17 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 ---
 
 ## Release Notes
+
+### v1.5.1 — 2026-04-01
+
+## What changed
+- Added a real auto target-size mode that resolves per source file into fast, balanced, or strict instead of behaving like a static label.
+- Made auto resource use and auto thread selection workload-aware so heavy software AV1, hardware encodes, and multi-job runs choose more sensible budgets.
+- Fixed the GUI batch path so auto thread selection is decided by the compressor at encode time instead of being frozen too early in the window layer.
+- Updated the live encoder preview to show the resolved auto governor and target-size behavior more clearly.
+
+## Validation
+- Full test suite passed before release.
 
 ### v1.5.0 — 2026-04-01
 
