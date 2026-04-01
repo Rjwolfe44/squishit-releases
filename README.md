@@ -7,12 +7,12 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 ## ⬇ Latest Download
 
-**[SquishIt-Setup-v1.4.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.4.0/SquishIt-Setup-v1.4.0.exe)** &nbsp;·&nbsp; v1.4.0 &nbsp;·&nbsp; Released 2026-03-23
+**[SquishIt-Setup-v1.5.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.5.0/SquishIt-Setup-v1.5.0.exe)** &nbsp;·&nbsp; v1.5.0 &nbsp;·&nbsp; Released 2026-04-01
 
-> ﻿## What's new  
-> - Added a live encoder/thread preview in the main window.  
-> - Dynamic codec filtering now hides unavailable encoders and reflects real GPU support.  
-> - Strong/Extreme AV1 now favors compression efficiency and retries with stronger settings when needed.
+> ## What's New  
+> - Added fast, balanced, and strict target-size modes with iterative bitrate convergence for closer MB matching.  
+> - Added preflight skipping when the requested target is not smaller than the source file.  
+> - Added sample compare mode for quick codec checks and new batch queue-order controls.
 
 ---
 
@@ -20,6 +20,7 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 | Version | Released | Download |
 |---------|----------|----------|
+| **v1.5.0** | 2026-04-01 | [SquishIt-Setup-v1.5.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.5.0/SquishIt-Setup-v1.5.0.exe) |
 | **v1.4.0** | 2026-03-23 | [SquishIt-Setup-v1.4.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.4.0/SquishIt-Setup-v1.4.0.exe) |
 | **v1.3.1** | 2026-03-22 | [SquishIt-Setup-v1.3.1.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.3.1/SquishIt-Setup-v1.3.1.exe) |
 | **v1.2.2** | 2026-03-22 | [SquishIt-Setup-v1.2.2.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.2.2/SquishIt-Setup-v1.2.2.exe) |
@@ -29,6 +30,26 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 ---
 
 ## Release Notes
+
+### v1.5.0 — 2026-04-01
+
+## What's New
+
+- Added fast, balanced, and strict target-size modes with iterative bitrate convergence for closer MB matching.
+- Added preflight skipping when the requested target is not smaller than the source file.
+- Added sample compare mode for quick codec checks and new batch queue-order controls.
+- Added resource-governor controls for safer thread budgeting and multi-job behavior.
+
+## Compression Improvements
+
+- Retuned AV1 defaults to prefer faster practical paths.
+- Improved AMD AV1 hardware quality mode by switching to a saner QVBR-based path.
+- Kept the keep-original safeguard while making target-size retries and warnings more explicit.
+
+## Release Hardening
+
+- Added version-alignment checks across app, package, and installer metadata before publishing.
+- Expanded automated coverage for target-size planning, CLI flags, and compare-mode surfaces.
 
 ### v1.4.0 — 2026-03-23
 
