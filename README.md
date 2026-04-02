@@ -7,12 +7,12 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 ## ⬇ Latest Download
 
-**[SquishIt-Setup-v1.7.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.7.0/SquishIt-Setup-v1.7.0.exe)** &nbsp;·&nbsp; v1.7.0 &nbsp;·&nbsp; Released 2026-04-02
+**[SquishIt-Setup-v1.7.1.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.7.1/SquishIt-Setup-v1.7.1.exe)** &nbsp;·&nbsp; v1.7.1 &nbsp;·&nbsp; Released 2026-04-02
 
-> ## Highlights  
-> - High-DPI UI pass: startup splash, responsive main window sizing, scaled dialogs, adaptive wrapping, and an in-app UI scale selector.  
-> - Exact-size upgrades: exact audio policy (keep, reduce, drop), optional two-pass exact sizing, and a smarter fallback ladder for very aggressive targets.  
-> - Better guidance: per-file recommendations now explain when a target is below the likely floor and when two-pass or audio drop will help.
+> ## Fixes  
+> - Startup splash now reliably renders before the main window bootstraps instead of flashing past during heavy UI initialization.  
+> - UI scale changes no longer expose the live CustomTkinter reflow; SquishIt now hides the main window and shows a short transition overlay while the new scale is applied.  
+> - Release validation rerun: full pytest pass plus compile checks before packaging.
 
 ---
 
@@ -20,6 +20,7 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 | Version | Released | Download |
 |---------|----------|----------|
+| **v1.7.1** | 2026-04-02 | [SquishIt-Setup-v1.7.1.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.7.1/SquishIt-Setup-v1.7.1.exe) |
 | **v1.7.0** | 2026-04-02 | [SquishIt-Setup-v1.7.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.7.0/SquishIt-Setup-v1.7.0.exe) |
 | **v1.5.2** | 2026-04-02 | [SquishIt-Setup-v1.5.2.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.5.2/SquishIt-Setup-v1.5.2.exe) |
 | **v1.5.1** | 2026-04-01 | [SquishIt-Setup-v1.5.1.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.5.1/SquishIt-Setup-v1.5.1.exe) |
@@ -33,6 +34,14 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 ---
 
 ## Release Notes
+
+### v1.7.1 — 2026-04-02
+
+## Fixes
+
+- Startup splash now reliably renders before the main window bootstraps instead of flashing past during heavy UI initialization.
+- UI scale changes no longer expose the live CustomTkinter reflow; SquishIt now hides the main window and shows a short transition overlay while the new scale is applied.
+- Release validation rerun: full pytest pass plus compile checks before packaging.
 
 ### v1.7.0 — 2026-04-02
 
