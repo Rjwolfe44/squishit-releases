@@ -7,12 +7,12 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 ## ⬇ Latest Download
 
-**[SquishIt-Setup-v1.7.1.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.7.1/SquishIt-Setup-v1.7.1.exe)** &nbsp;·&nbsp; v1.7.1 &nbsp;·&nbsp; Released 2026-04-02
+**[SquishIt-Setup-v1.7.2.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.7.2/SquishIt-Setup-v1.7.2.exe)** &nbsp;·&nbsp; v1.7.2 &nbsp;·&nbsp; Released 2026-04-02
 
-> ## Fixes  
-> - Startup splash now reliably renders before the main window bootstraps instead of flashing past during heavy UI initialization.  
-> - UI scale changes no longer expose the live CustomTkinter reflow; SquishIt now hides the main window and shows a short transition overlay while the new scale is applied.  
-> - Release validation rerun: full pytest pass plus compile checks before packaging.
+> ## What's New  
+> - Removed AV1 and SVT-AV1 from SquishIt's public output codec choices.  
+> - HEVC is now the primary high-efficiency path, with H.264 and VP9 remaining available.  
+> - The Max and Quick Compress Max presets now use stronger HEVC settings instead of slow AV1-based paths.
 
 ---
 
@@ -20,6 +20,7 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 | Version | Released | Download |
 |---------|----------|----------|
+| **v1.7.2** | 2026-04-02 | [SquishIt-Setup-v1.7.2.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.7.2/SquishIt-Setup-v1.7.2.exe) |
 | **v1.7.1** | 2026-04-02 | [SquishIt-Setup-v1.7.1.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.7.1/SquishIt-Setup-v1.7.1.exe) |
 | **v1.7.0** | 2026-04-02 | [SquishIt-Setup-v1.7.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.7.0/SquishIt-Setup-v1.7.0.exe) |
 | **v1.5.2** | 2026-04-02 | [SquishIt-Setup-v1.5.2.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.5.2/SquishIt-Setup-v1.5.2.exe) |
@@ -34,6 +35,21 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 ---
 
 ## Release Notes
+
+### v1.7.2 — 2026-04-02
+
+## What's New
+- Removed AV1 and SVT-AV1 from SquishIt's public output codec choices.
+- HEVC is now the primary high-efficiency path, with H.264 and VP9 remaining available.
+- The Max and Quick Compress Max presets now use stronger HEVC settings instead of slow AV1-based paths.
+
+## Compatibility
+- Older custom profiles that previously used AV1 or SVT-AV1 are now migrated onto HEVC automatically.
+- Compare mode and codec recommendations were updated to reflect the new HEVC-first stack.
+
+## Validation
+- Full pytest suite passed before publishing.
+- 1.7.2 installer rebuilt successfully.
 
 ### v1.7.1 — 2026-04-02
 
