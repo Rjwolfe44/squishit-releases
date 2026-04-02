@@ -7,12 +7,12 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 ## ⬇ Latest Download
 
-**[SquishIt-Setup-v1.5.1.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.5.1/SquishIt-Setup-v1.5.1.exe)** &nbsp;·&nbsp; v1.5.1 &nbsp;·&nbsp; Released 2026-04-01
+**[SquishIt-Setup-v1.5.2.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.5.2/SquishIt-Setup-v1.5.2.exe)** &nbsp;·&nbsp; v1.5.2 &nbsp;·&nbsp; Released 2026-04-02
 
 > ## What changed  
-> - Added a real auto target-size mode that resolves per source file into fast, balanced, or strict instead of behaving like a static label.  
-> - Made auto resource use and auto thread selection workload-aware so heavy software AV1, hardware encodes, and multi-job runs choose more sensible budgets.  
-> - Fixed the GUI batch path so auto thread selection is decided by the compressor at encode time instead of being frozen too early in the window layer.
+> - Fixed misleading target-size completion messaging for impossible or floor-limited targets.  
+> - SquishIt now reports when the requested target is below the estimated minimum achievable size for the clip instead of making it look like a normal strict-mode success path.  
+> - Added preview and planner surfacing for the estimated size floor so very small targets are explained up front.
 
 ---
 
@@ -20,6 +20,7 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 | Version | Released | Download |
 |---------|----------|----------|
+| **v1.5.2** | 2026-04-02 | [SquishIt-Setup-v1.5.2.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.5.2/SquishIt-Setup-v1.5.2.exe) |
 | **v1.5.1** | 2026-04-01 | [SquishIt-Setup-v1.5.1.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.5.1/SquishIt-Setup-v1.5.1.exe) |
 | **v1.5.0** | 2026-04-01 | [SquishIt-Setup-v1.5.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.5.0/SquishIt-Setup-v1.5.0.exe) |
 | **v1.4.0** | 2026-03-23 | [SquishIt-Setup-v1.4.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.4.0/SquishIt-Setup-v1.4.0.exe) |
@@ -31,6 +32,16 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 ---
 
 ## Release Notes
+
+### v1.5.2 — 2026-04-02
+
+## What changed
+- Fixed misleading target-size completion messaging for impossible or floor-limited targets.
+- SquishIt now reports when the requested target is below the estimated minimum achievable size for the clip instead of making it look like a normal strict-mode success path.
+- Added preview and planner surfacing for the estimated size floor so very small targets are explained up front.
+
+## Validation
+- Full test suite passed before release.
 
 ### v1.5.1 — 2026-04-01
 
