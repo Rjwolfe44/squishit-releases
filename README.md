@@ -7,12 +7,12 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 ## ⬇ Latest Download
 
-**[SquishIt-Setup-v1.7.2.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.7.2/SquishIt-Setup-v1.7.2.exe)** &nbsp;·&nbsp; v1.7.2 &nbsp;·&nbsp; Released 2026-04-02
+**[SquishIt-Setup-v2.0.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v2.0.0/SquishIt-Setup-v2.0.0.exe)** &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; Released 2026-04-14
 
-> ## What's New  
-> - Removed AV1 and SVT-AV1 from SquishIt's public output codec choices.  
-> - HEVC is now the primary high-efficiency path, with H.264 and VP9 remaining available.  
-> - The Max and Quick Compress Max presets now use stronger HEVC settings instead of slow AV1-based paths.
+> ## SquishIt 2.0.0  
+> A major update focused on smarter compression control, broader codec support, and a more stable desktop workflow.  
+> ### Highlights  
+> - Added the new v2 codec engine with richer H.264, HEVC, VP9, AV1, and SVT-AV1 handling plus better hardware encoder parity.
 
 ---
 
@@ -20,6 +20,7 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 
 | Version | Released | Download |
 |---------|----------|----------|
+| **v2.0.0** | 2026-04-14 | [SquishIt-Setup-v2.0.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v2.0.0/SquishIt-Setup-v2.0.0.exe) |
 | **v1.7.2** | 2026-04-02 | [SquishIt-Setup-v1.7.2.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.7.2/SquishIt-Setup-v1.7.2.exe) |
 | **v1.7.1** | 2026-04-02 | [SquishIt-Setup-v1.7.1.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.7.1/SquishIt-Setup-v1.7.1.exe) |
 | **v1.7.0** | 2026-04-02 | [SquishIt-Setup-v1.7.0.exe](https://github.com/Rjwolfe44/squishit-releases/releases/download/v1.7.0/SquishIt-Setup-v1.7.0.exe) |
@@ -35,6 +36,27 @@ Modern codecs (AV1, HEVC, H.264) · Hardware acceleration · Explorer right-clic
 ---
 
 ## Release Notes
+
+### v2.0.0 — 2026-04-14
+
+## SquishIt 2.0.0
+
+A major update focused on smarter compression control, broader codec support, and a more stable desktop workflow.
+
+### Highlights
+- Added the new v2 codec engine with richer H.264, HEVC, VP9, AV1, and SVT-AV1 handling plus better hardware encoder parity.
+- Reworked target-size mode with auto, fast, balanced, strict, and exact behavior, including smarter retry search and better exact-size landing.
+- Fixed bitrate-driven target-size encoding across encoder families, including AMF hardware paths.
+- Improved real-world target-size reliability with aggressive fallback logic for impossible tiny targets.
+- Defaulted the UI to 100% scaling, improved minimum sizing, and reduced layout clipping in the main window.
+- Reorganized settings so target-size controls and related options are easier to find.
+- Switched default audio behavior toward Opus for better size-to-quality results.
+- Improved retry/progress reporting and queue-aware thread planning in the main app.
+- Fixed a libx265 startup failure by clamping unsafe software HEVC thread counts and removing duplicate thread flags.
+
+### Notes
+- Exact target mode may switch to a software efficiency path when the requested size is below the practical floor for the source.
+- This release includes expanded regression coverage for codec command generation, AMF target-size behavior, and exact-size retries.
 
 ### v1.7.2 — 2026-04-02
 
